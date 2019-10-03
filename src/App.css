@@ -1,22 +1,935 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.header_grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr, auto);
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin:0px;
+  grid-template-areas: 
+  " logo nav serch login"
+ }
+
+ .logo{
+grid-area: logo;
+
+ }
+
+ .nav{
+grid-area: nav;
+
+ }
+
+ .serch{
+grid-area: serch;
+ }
+
+ .login{
+grid-area: login;
+ }
+
+ .logo_pick{
+   width: 250px;
+ }
+
+ ul{margin-top: 25px;
+   display: flex;
+   flex-direction: row;
+   text-decoration: none;
+   list-style-type: none;
+   justify-content: space-around;
+   color: black;
+ }
+ .ul{
+  text-decoration: none;
+ }
+ li{
+   font-size: 20px;
+  text-decoration: none;
+  display:inline-block;
+  list-style-type: none;
+  color: black;
+  font-family: 'Oswald', sans-serif;
+
+ }
+a{
+  
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+
+.serch_box{
+  margin-top: 28px;
+  float: right;
+  
+}
+
+.serch_input{
+height: 25px;
+background-color: rgb(209, 207, 207);
+border: none;
+
+}
+.serch_button{
+  height: 25px;
+  width: 50px;
+  background-color:  #f0f0f0;
+  border: solid #d9dad9;
+  
+  
+}
+
+.login_container{
+  margin-top: 28px;
+  float: right;
+}
+
+.login_box{
+  vertical-align: center;
+  background-color: #cccccc;
+  padding-left: 10px;
+  width: 100px;
+  font-size: 16px;
+}
+.fa-lock{
+  background-color: black;
+  color: white;
+  font-size: 19px;
+  padding: 3px;
+}
+
+.home_pick{
+  height: 81vh;
+  width: 100%;
+  background-position: center;
+  object-fit: cover;
+  display: inline-block;
+  background-image: url(/imgs/scuba2.jpg);
   text-align: center;
+  
+}
+.white{
+  
+  background-color: white;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 300px;
+  padding: 25px;
+  opacity: 0.8;
 }
 
-.App-logo {
-  height: 40vmin;
+
+.udstyr_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin-top:20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  
+  grid-template-areas: 
+  " populære populære_gray"
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.populære{
+  grid-area:populære;
+  
+  padding: 7px 7px 7px 50px;
+  background-color: #252525;
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.populære_gray{
+  grid-area: populære_gray;
+  background-color: #cccccc;
+}
+
+.flex_grid{
+  
+    display: grid;
+    grid-template-columns: repeat(1, 1fr );
+    grid-template-rows: minmax( auto);
+    max-width: 100%;
+    margin-top:50px;
+    margin-right: 40px;
+    margin-left: 40px;
+    
+    grid-template-areas: 
+    "flex_area"
+  }
+
+
+.flex-container{
+  grid-area: flex_area;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.img_flex{
+  width: 100%;
+  
+}
+.element_text{
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.udstyr_text{
+  margin-top: 25px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.container{
+  text-align: center;
+  width: 333px;
+  height: 430px;
+  margin-top: 10px;
+  box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+}
+
+.dyk_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin-top:20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  
+  grid-template-areas: 
+  " dyk dyk_gray"
+}
+
+.dyk{
+  grid-area:dyk;
+  
+  padding: 7px 7px 7px 50px;
+  background-color: #252525;
+  color: white;
+}
+
+.dyk_gray{
+  grid-area: dyk_gray;
+  background-color: #cccccc;
+}
+
+
+.dyker_grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr );
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin-top:20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  
+  grid-template-areas: 
+  "flex_dyker"
+}
+
+.dyker-container{
+  grid-area: flex_dyker;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.img_dyker{
+  width: 100%;
+  
+  background-color: white;
+  
+}
+
+.container_dyker{
+  margin-top: 100px;
+  
+  width: 600px;
+  background-color: rgb(0, 0, 0);
+  height: 430px;
+  box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+}
+
+.dyker_text{
+  padding: 10px;
+  color: white;
+  background-color: black;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+}
+.dyker_small{
+  padding: 10px;
+  color: white;
+  background-color: black;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+.padi_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin-top:20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  
+  grid-template-areas: 
+  " padi padi_gray"
+}
+
+.padi{
+  grid-area:padi;
+  
+  padding: 7px 7px 7px 50px;
+  background-color: #252525;
+  color: white;
+}
+
+.padi_gray{
+  grid-area: padi_gray;
+  background-color: #cccccc;
+}
+
+
+.dykkercertifikat_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin-top:40px;
+  margin-right: 40px;
+  margin-left: 40px;
+  border: solid 2px black;
+  box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+  grid-template-areas: 
+  "text img"
+}
+
+.dykkercertifikat_text{
+  grid-area: text;
+  padding: 120px;
+}
+
+.dykkercertifikat_img{
+  grid-area: img;
+  padding: 10px;
+  padding-left: 100px;
+}
+
+footer{
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(4, 1fr );
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin-top:40px;
+  padding-bottom: 20px;
+  background-color: black;
+  color: white;
+  box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+  grid-template-areas: 
+  "footer1 footer2 footer3 footer4"
+}
+
+.media{
+  margin-left: 10px;
+}
+
+.footer_link{
+  color: white;
+  font-size: 15px;
+}
+
+.ul_footer{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_h3{
+  font-size: 13px;
+}
+
+.footer_01{
+  grid-area: footer1;
+  color: white;
+  padding-top: 50px;
+  padding-left: 100px;
+}
+.footer_02{
+  grid-area: footer2;
+  color: white;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+.footer_03{
+  grid-area: footer3;
+  color: white;
+  padding-top: 50px;
+}
+.footer_04{
+  grid-area: footer4;
+  color: white;
+  padding-top: 50px;
+}
+
+
+.kontakt_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin-top:20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  
+  grid-template-areas: 
+  " populære populære_gray"
+}
+
+.kontakt{
+  grid-area:populære;
+  
+  padding: 7px 7px 7px 50px;
+  background-color: #252525;
+  color: white;
+}
+
+.kontakt_gray{
+  grid-area: populære_gray;
+  background-color: #cccccc;
+}
+
+.kontakt_box_grid{
+  display: grid;
+  height: 50vh;
+  box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+  grid-template-columns: repeat(2, 1fr );
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin-top:20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  
+  grid-template-areas: 
+  " telle kon"
+}
+
+.kon{
+  grid-area: telle;
+}
+
+.telle{
+  grid-area: kon;
+}
+
+textarea {
+  width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.email_contact{
+  padding-left: 20%;
+}
+
+.tlf{
+  padding-top: 30px;
+}
+
+.maps{
+  width: 60%;
+}
+
+.omos_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin-top:20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  
+  grid-template-areas: 
+  " omos omos_gray"
+}
+
+.omos{
+  grid-area:omos;
+  
+  padding: 7px 7px 7px 50px;
+  background-color: #252525;
+  color: white;
+}
+
+.omos_gray{
+  grid-area: omos_gray;
+  background-color: #cccccc;
+}
+
+.omos_text{
+  display: grid;
+  height: auto;
+  box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+  grid-template-columns: repeat(1, 1fr );
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin-top:20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  text-align: center;
+  padding-top: 10px;
+  
+  grid-template-areas: 
+  " om_text"
+
+}
+
+.om_text{
+  grid-area: om_text;
+  padding: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.login_grid{
+  display: grid;
+  height: 70vh;
+  box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+  grid-template-columns: repeat(1, 1fr );
+  grid-template-rows: minmax( auto);
+  max-width: 100%;
+  margin-top:20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+  grid-template-areas: 
+  " login"
+}
+
+.login_box_real{
+  grid-area: login;
+  box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+  width: 100%;
+  height: 450px;
+  
+  
+}
+
+.login_input{
+  width: 40%;
+  height: 25px;
+  border-radius: 2px;
+  border: solid 1px;
+  background-color: #ebe9e9;
+}
+
+.button_login{
+  height: 30px;
+  width: 30%;
+  background-color: rgb(119, 119, 119);
+  border: solid 2px rgb(82, 82, 82);
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  
+  font-family: 'Raleway', sans-serif;
+}
+
+.login_pick{
+  width: 100%;
+  background-color: #5f5f5f;
+}
+
+@media screen and (max-width: 1030px) {
+  
+
+
+  
+  .header_grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr, auto);
+    grid-template-rows: minmax( auto);
+    max-width: 100%;
+    margin:0px;
+    grid-template-areas: 
+    " nav nav nav nav"
+    " serch logo logo login";
+   }
+  
+   .logo{
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  
+   }
+  
+   .nav{
+  grid-area: nav;
+  
+   }
+  
+   .serch{
+  grid-area: serch;
+   }
+  
+   .login{
+  grid-area: login;
+   }
+  
+   .logo_pick{
+     width: 250px;
+   }
+
+   .dykkercertifikat_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+    grid-template-rows: minmax( auto);
+    max-width: 100%;
+    margin-top:40px;
+    
+    border: solid 2px black;
+    box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+    grid-template-areas: 
+    "text text"
+    "img img";
+  }
+  
+  .dykkercertifikat_text{
+    grid-area: text;
+    padding: 0px;
+  }
+  
+  .dykkercertifikat_img{
+    grid-area: img;
+    padding: 10px;
+    width: 100%;
+    
+  }
+
+  .padi_logo{
+    width: 90%;
+  }
+
+
+  .container{
+    text-align: center;
+    width: 300px;
+    height: 430px;
+    box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+  }
+}
+
+
+
+@media screen and (max-width: 670px) {
+
+
+  .home_pick{
+    height: 51vh;
+    width: 100%;
+    background-position: center;
+    object-fit: cover;
+    display: inline-block;
+    background-image: url(/imgs/scuba2.jpg);
+    text-align: center;
+    
+  }
+  .white{
+    
+    background-color: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    padding: 25px;
+    opacity: 0.8;
+  }
+  
+  .header_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr, auto);
+    grid-template-rows: minmax( auto);
+    max-width: 100%;
+    margin:0px;
+    grid-template-areas: 
+   "logo logo"  
+   " nav nav "
+    
+    
+   }
+  
+   .logo{
+  grid-area: logo;
+  justify-content: center;
+  display: flex;
+  
+   }
+  
+   .nav{
+  grid-area: nav;
+  
+   }
+  
+   .serch{
+  grid-area: serch;
+  display: none;
+   }
+  
+   .login{
+  grid-area: login;
+  display: none;
+   }
+  
+   .logo_pick{
+     width: 250px;
+   }
+
+   ul{margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  li{
+    font-size: 40px;
+   text-decoration: none;
+   display:inline-block;
+   list-style-type: none;
+   color: black;
+   font-family: 'Oswald', sans-serif;
+   margin-top: 20px;
+  
+  }
+
+
+
+
+  footer{
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(1, 1fr );
+    grid-template-rows: minmax( auto);
+    max-width: 100%;
+    margin-top:40px;
+    padding-bottom: 20px;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+    grid-template-areas: 
+    "footer1"
+    "footer2"
+    "footer3"
+    "footer4"
+  }
+  
+  .media{
+    margin-left: 10px;
+  }
+  
+  .footer_link{
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ul_footer{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer_h3{
+    font-size: 13px;
+    display: none;
+  }
+  
+  .footer_01{
+    grid-area: footer1;
+    color: white;
+    padding-top: 50px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .footer_02{
+    grid-area: footer2;
+    color: white;
+    padding-top: 20px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .footer_03{
+    grid-area: footer3;
+    color: white;
+    padding-top: 20px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .footer_04{
+    grid-area: footer4;
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+  }
+
+
+  .container_dyker{
+    margin-top: 50px;
+    
+    width: 350px;
+    background-color: rgb(0, 0, 0);
+    height: 430px;
+    box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+  }
+
+
+  .dykkercertifikat_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+    grid-template-rows: minmax( auto);
+    max-width: 100%;
+    margin-top:40px;
+    margin-right: 40px;
+    margin-left: 40px;
+    border: solid 2px black;
+    box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+    grid-template-areas: 
+    "text text"
+    "img img";
+  }
+  
+  .dykkercertifikat_text{
+    grid-area: text;
+    padding: 10px;
+  }
+  
+  .dykkercertifikat_img{
+    grid-area: img;
+    padding: 10px;
+    width: 100%;
+    
+  }
+
+
+  .kontakt_box_grid{
+    display: grid;
+    height: 50vh;
+    box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+    grid-template-columns: repeat(2, 1fr );
+    grid-template-rows: minmax( auto);
+    max-width: 100%;
+    margin-top:20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    
+    grid-template-areas: 
+    " telle telle"
+    
+  }
+  
+  .kon{
+    grid-area: telle;
+  }
+  
+  .telle{
+    grid-area: kon;
+  display: none;
+  }
+
+
+  .omos_text{
+    display: grid;
+    height: auto;
+    box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+    grid-template-columns: repeat(1, 1fr );
+    grid-template-rows: minmax( auto);
+    max-width: 100%;
+    margin-top:20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    text-align: center;
+    padding-top: 10px;
+    
+    grid-template-areas: 
+    " om_text"
+  
+  }
+  
+  .om_text{
+    grid-area: om_text;
+    padding: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+  .udstyr_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+    grid-template-rows: minmax( auto);
+    max-width: 100%;
+    margin-top:20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+    grid-template-areas: 
+    " populære populære_gray"
+  }
+
+}
+
+
+@media screen and (max-width: 420px) {
+
+  .container_dyker{
+    margin-top: 50px;
+    
+    width: 300px;
+    background-color: rgb(0, 0, 0);
+    height: 430px;
+    box-shadow: 0px 0px 41px -23px rgba(0,0,0,1);
+  }
+
 }

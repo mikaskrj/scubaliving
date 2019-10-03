@@ -1,25 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './comments/Header'
+import Home from './comments/Home'
+import Udstyr from './comments/Udstyr'
+import Dyk from './comments/Dyk'
+import Padi from './comments/Padi'
+import Footer from './comments/Footer'
+import Kontakt from './comments/Kontakt'
+import Omos from './comments/Omos'
+import Login from './comments/Login'
 
+
+
+import { BrowserRouter, Route } from 'react-router-dom'
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+    <Header/>
+    <Route exact path ='/' component={Home} />
+    <Route path ='/Udstyr' component={Udstyr} />
+    <Route path ='/Dyk' component={Dyk} />
+    <Route path ='/Padi' component={Padi} />
+    <Route path ='/Kontakt' component={Kontakt} />
+    <Route path ='/Omos' component={Omos} />
+    <Route path ='/Login' component={Login} />
+    
+    <Footer />
+
+    
+
     </div>
+    </BrowserRouter>
   );
 }
 
